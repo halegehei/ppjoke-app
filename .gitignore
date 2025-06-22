@@ -1,0 +1,40 @@
+# ========== Gradle build ==========
+.gradle/                     # Gradle 本地缓存
+build/                       # 所有模块的 build 输出
+**/build/
+
+# ========== Android / Java ==========
+*.apk                        # 打包产物
+*.ap_                        # APK 别名
+*.dex                        # Dalvik 可执行文件
+*.class                      # Java 编译产物
+*.jar                        # 可执行 Jar
+/bin/                        # Eclipse 默认输出目录
+/gen/                        # Eclipse 生成目录（R.java 等）
+captures/                    # Android Studio 截图
+
+# ========== 本地配置 ==========
+local.properties             # SDK 路径等本地配置，不要提交
+*.properties                 # 可按需保留，避免提交敏感配置
+
+# ========== IDE / 编辑器 ==========
+*.iml                        # IntelliJ/Android Studio module 文件
+*.iws
+*.ipr
+.idea/                       # IDE 项目配置
+.gradle/                     # IntelliJ 同步的 Gradle 设置
+*.hprof                      # Java heap dump
+
+# ========== Keystore ==========
+*.jks                        # Java KeyStore
+*.keystore                   # 旧版 keystore
+key/                         # 你的 keystore 目录（如你截图中的 key 文件夹）
+
+# ========== Native / CMake / NDK ==========
+.externalNativeBuild/        # CMake / ndk-build 输出
+.cxx/                        # Android Studio C++ 编译产物
+obj/                         # NDK 默认输出
+
+# ========== 其他 ==========
+.DS_Store                    # macOS 文件索引
+*.log                        # 日志文件
