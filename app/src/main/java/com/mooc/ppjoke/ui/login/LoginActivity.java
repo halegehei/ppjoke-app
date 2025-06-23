@@ -26,6 +26,7 @@ import org.json.JSONObject;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private View actionClose;
     private View actionLogin;
+    private View actionLoginPhone;
     private Tencent tencent;
 
     @Override
@@ -35,9 +36,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         actionClose = findViewById(R.id.action_close);
         actionLogin = findViewById(R.id.action_login);
+        actionLoginPhone = findViewById(R.id.action_login_phone);
 
         actionClose.setOnClickListener(this);
         actionLogin.setOnClickListener(this);
+        actionLoginPhone.setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +50,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             finish();
         } else if (v.getId() == R.id.action_login) {
             login();
+        } else if (v.getId() == R.id.action_login_phone) {
+            startActivity(new Intent(this, PhoneLoginActivity.class));
         }
     }
 
