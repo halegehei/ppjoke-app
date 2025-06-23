@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="45dp"
+    android:paddingVertical="12dp"
+    android:id="@+id/rootLayout"
+    android:background="@drawable/business_toast_bg">
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="this is toast"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

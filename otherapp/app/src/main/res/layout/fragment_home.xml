@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:background="#F7F7F7"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_image"
+        android:layout_width="match_parent"
+        android:layout_height="272dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/home_bg" />
+
+    <ImageView
+        android:id="@+id/top_right_button_share"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignEnd="@id/main_image"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="8dp"
+        android:src="@mipmap/home_share_btn" />
+
+    <!-- Middle Section with Buttons -->
+    <LinearLayout
+        android:id="@+id/middle_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-32dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/main_image">
+
+        <ImageView
+            android:id="@+id/left_button_share"
+            android:layout_width="0dp"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/home_share"/>
+        <View
+            android:layout_width="12dp"
+            android:layout_height="0dp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/home_saomiao"
+                android:gravity="center"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"/>
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@mipmap/home_tianjia"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Section (TextViews and List) -->
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_background"
+            android:layout_below="@id/middle_buttons_layout"
+            android:layout_margin="13dp"
+           >
+
+            <!-- 顶部标题和查看更多 -->
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="8dp">
+
+                <!-- 左侧 TextView：连接记录 -->
+                <TextView
+                    android:id="@+id/left_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="连接记录"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"/>
+
+                <!-- 右侧 TextView：查看更多 -->
+                <TextView
+                    android:id="@+id/right_text_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看更多"
+                    android:textSize="13sp"
+                    android:textColor="#A0A0A0"
+                    android:gravity="end"
+                    android:layout_marginRight="13dp"
+                    android:drawableEnd="@mipmap/home_qianjin"
+                    android:drawablePadding="1dp"/>
+
+
+
+            </LinearLayout>>
+
+            <!-- RecyclerView：连接记录列表 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_background"
+                />
+
+            <!-- 如果没有记录，显示一个占位图像和文字 -->
+            <LinearLayout
+                android:id="@+id/no_records_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/no_records_image"
+                    android:layout_width="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/home_nothing"/>
+
+                <TextView
+                    android:id="@+id/no_records_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂无记录"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

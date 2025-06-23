@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.MEDIA_PROJECTION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- 音频录制权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 读取外部存储权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 写入外部存储权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <permission
+        android:name="${applicationId}.openadsdk.permission.TT_PANGOLIN"
+        android:protectionLevel="signature" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="${applicationId}.openadsdk.permission.TT_PANGOLIN" />
+
+    <queries>
+        <package android:name="com.tencent.mm" />
+        <!-- 正式环境 -->
+        <package android:name="com.eg.android.AlipayGphone" />
+    </queries>
+
+    <application
+        android:name=".BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/${ICON_R}"
+        android:label="${APP_NAME}"
+        android:roundIcon="@mipmap/${ICON_R}"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ControlCenter"
+        tools:replace="android:label"
+        tools:targetApi="n">
+        <meta-data
+            android:name="APP_NAME"
+            android:value="${APP_NAME}" />
+        <meta-data
+            android:name="ICON_R"
+            android:value="${ICON_R}" />
+        <meta-data
+            android:name="CENTER_APP_ID"
+            android:value="${CENTER_APP_ID}" />
+        <meta-data
+            android:name="CENTER_SERVER_URL"
+            android:value="${CENTER_SERVER_URL}" />
+        <meta-data
+            android:name="PACKET"
+            android:value="${PACKET}" />
+        <meta-data
+            android:name="THEME"
+            android:value="${THEME}" />
+
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米（xiaomi）刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <meta-data
+            android:name="ScopedStorage"
+            android:value="true" />
+
+
+        <activity
+            android:name=".ui.activity.WelcomActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/${THEME}">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize"/>
+
+
+        <!-- 微信注册 -->
+        <activity
+            android:name="${applicationId}.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="${APP_NAME}"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:taskAffinity="${applicationId}"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name="${applicationId}.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".ui.view.MediaService"
+            android:enabled="true"
+            android:foregroundServiceType="mediaProjection"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.tencent.rtmp.video.TXScreenCapture$TXScreenCaptureAssistantActivity"
+            android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.litemob.screentogetherpink.ui.activity.AddActivity" />
+        <activity android:name="com.litemob.screentogetherpink.ui.activity.ShareActivity" />
+        <activity android:name="com.litemob.screentogetherpink.ui.activity.RecordsActivity" />
+        <activity android:name=".ui.activity.PlayActivity"/>
+
+        <activity android:name=".ui.activity.QRCodeScanActivity"/>
+
+
+
+
+
+    </application>
+
+</manifest>

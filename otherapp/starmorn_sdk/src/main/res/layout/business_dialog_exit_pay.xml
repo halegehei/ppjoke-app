@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/outRootLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:layout_alignEnd="@+id/rootLayout"
+            android:src="@mipmap/business_score_close_btn"/>
+
+        <RelativeLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="300dp"
+            android:layout_height="450dp"
+            android:layout_below="@+id/closeBtn"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/business_exit_pay_dialog_bg">
+
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:background="@drawable/business_exit_pay_count_down_time_bg"
+                android:gravity="center"
+                android:text="00:00:00:00"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="280dp"
+                android:layout_height="260dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="110dp"
+                android:background="@mipmap/business_exit_dialog_content_bg">
+
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="230dp"
+                    android:layout_height="180dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/business_exit_pay_dialog_down_price_img" />
+
+                <TextView
+                    android:id="@+id/bottomLabel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/line"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="140dp"
+                    android:text="底层\n标签"
+                    android:textColor="#F57A31"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/bottomLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/line"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="140dp"
+                    android:text="底层\n标签"
+                    android:textColor="#F57A31"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/topLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:minHeight="100dp"
+                    android:text="顶层\n标签"
+                    android:textColor="#F4F275"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="170dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/freeDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="免费天数"
+                        android:textColor="#FF2A2A"
+                        android:textSize="23dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/labelTips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="备用标签"
+                        android:textColor="#FF2A2A"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dingyueshuoming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:maxLines="1"
+                    android:text="订阅说明订阅说明订阅说明"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="270dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/contentLayout"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/business_exit_pay_submit_bg"
+                android:gravity="center"
+                android:text="按钮文字"
+                android:textColor="#FEF4EC"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/checkboxLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rootLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/payCheckBox"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2dp"
+                android:src="@mipmap/business_checkbox_on"/>
+
+            <TextView
+                android:id="@+id/permissionTipsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阅读并勾选"
+                android:textColor="#B8B8B8"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/left_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《用户协议》"
+                android:textColor="#B8B8B8"
+                android:textStyle="bold"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/center_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《隐私政策》"
+                android:textStyle="bold"
+                android:textColor="#B8B8B8"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/right_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《付费协议》"
+                android:textStyle="bold"
+                android:textColor="#B8B8B8"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/last_click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《自动续费协议》"
+                android:textStyle="bold"
+                android:textColor="#B8B8B8"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

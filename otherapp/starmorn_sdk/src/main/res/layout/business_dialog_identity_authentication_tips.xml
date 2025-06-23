@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:background="@drawable/business_default_dialog_bg_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="温馨提示"
+            android:textSize="20dp"
+            android:textColor="@color/color_333333"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="根据国家相关规定，完整使用本产品功能需进行实名认证，请确认您的年龄，完成用户实名认证以保证功能使用不受限制。"
+            android:textSize="15dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#666666"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="稍后认证"
+                android:gravity="center"
+                android:textColor="@color/business_dialog_theme_cancel_btn_text_color"
+                android:textSize="18dp"
+                android:background="@drawable/default_cancel_btn_bg"/>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="继续认证"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/business_dialog_theme_submit_btn_text_color"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/default_btn_bg"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

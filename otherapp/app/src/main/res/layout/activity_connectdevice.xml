@@ -1,0 +1,124 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="334dp"
+
+ >
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="334dp"
+            android:src="@mipmap/icon_add_top"
+
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="48dp"
+            android:text="连接设备"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+
+
+        <ImageView
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/icon_back"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="-38dp"
+        android:background="@drawable/rounded_background"
+        android:paddingRight="13dp"
+        android:paddingLeft="13dp"
+       >
+
+        <!-- Device Code Section -->
+        <TextView
+            android:id="@+id/deviceCodeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备码"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_deviceCode"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:hint="请输入设备码"
+            android:inputType="number"
+            android:text=""
+            android:paddingLeft="13dp"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:background="@drawable/rounded_button_background_gray"
+            android:layout_marginBottom="16dp" />
+
+
+        <!-- Verification Code Section -->
+        <TextView
+            android:id="@+id/verificationCodeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_verificationCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="请输入验证码"
+            android:inputType="number"
+            android:text=""
+            android:textColor="#000000"
+            android:paddingLeft="13dp"
+            android:textSize="13sp"
+
+            android:background="@drawable/rounded_button_background_gray"
+            android:layout_marginBottom="32dp" />
+
+        <Button
+            android:id="@+id/connectButton"
+            android:layout_width="193dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="80dp"
+            android:text="开始连接"
+
+            android:background="@drawable/default_btn_bg"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout
+   >
+
+
+</LinearLayout>

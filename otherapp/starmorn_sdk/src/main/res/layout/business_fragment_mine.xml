@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout"
+    android:background="#080A1B">
+
+    <ImageView
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@mipmap/business_mine_page_top_image"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/userInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/business_def_user_icon"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="点击登录"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowColor="#4D00062E"
+                android:shadowRadius="4"
+                android:textSize="18dp"
+                android:layout_marginStart="12dp"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/userInfoGotoImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                android:src="@mipmap/business_mine_goto2" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/vipBannerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/topLayout"
+        android:layout_marginTop="-40dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@mipmap/business_vip_banner">
+
+        <ImageView
+            android:id="@+id/vipBannerLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="5dp"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@+id/vipBannerLogo"
+            android:layout_centerVertical="true">
+
+            <View
+                android:id="@+id/paddingView"
+                android:layout_width="15dp"
+                android:layout_height="0dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vipBannerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成为超级会员 "
+                    android:textSize="23dp"
+                    android:textStyle="italic"
+                    android:fontFamily="@font/pay_banner"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="#4E1C00"/>
+
+                <TextView
+                    android:id="@+id/vipBannerDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开通会员专享全部资源"
+                    android:layout_marginTop="5dp"
+                    android:textSize="12dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="#4E1C00"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/vipBannerBtn"
+                android:layout_width="82dp"
+                android:layout_height="38dp"
+                android:text="立即开通"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="15dp"
+                android:textSize="13dp"
+                android:background="@drawable/business_vip_pay_btn_bg"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/vipBannerLayout"
+        android:layout_marginTop="10dp"
+        tools:itemCount="5"
+        tools:listitem="@layout/business_item_mine_settings_layout"/>
+
+</RelativeLayout>

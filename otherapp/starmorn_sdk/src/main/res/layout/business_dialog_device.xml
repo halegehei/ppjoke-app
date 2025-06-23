@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/business_default_dialog_bg_white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="50dp"
+            tools:itemCount="5"
+            tools:listitem="@layout/business_item_dialog_device">
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <Button
+            android:id="@+id/copy_all"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="全部复制"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:textColor="#FFF"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="50dp"
+            android:layout_margin="10dp"
+            android:paddingEnd="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/default_btn_bg" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

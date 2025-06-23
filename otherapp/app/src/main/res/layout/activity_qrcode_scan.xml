@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@mipmap/icon_back_white"
+        />
+
+
+    <TextView
+        android:text="@string/qrcodetip"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginTop="120dp"
+        android:background="@color/black"
+      />
+
+    <com.king.view.viewfinderview.ViewfinderView
+        android:id="@+id/viewfinderView"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginTop="120dp"
+        app:vvFrameHeight="480dp"
+        app:vvFrameWidth="500dp"
+        app:vvLabelText="请将二维码放入取景框中"
+        app:vvLabelTextColor="@color/white"
+        app:vvLabelTextLocation="top"
+        app:vvLabelTextSize="14sp"
+        app:vvLaserDrawable="@drawable/icon_scan_line"
+        app:vvLaserStyle="image"
+        app:vvViewfinderStyle="popular" />
+
+<!--    <ImageView-->
+
+<!--        android:id="@+id/ivFlashlight"-->
+<!--        android:layout_width="75dp"-->
+<!--        android:layout_height="75dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="280dp"-->
+<!--        android:contentDescription="@null"-->
+<!--        android:src="@mipmap/ic_camer" />-->
+
+    <ImageView
+        android:id="@+id/iv_album"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/viewfinderView"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_camer" />
+
+    <TextView
+        android:text="相册"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:layout_below="@id/iv_album"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>

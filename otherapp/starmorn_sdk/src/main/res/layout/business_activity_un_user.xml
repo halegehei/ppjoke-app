@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/returnBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/business_return_black_btn"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="注销账户"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/titleLayout"
+        android:paddingHorizontal="12dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.注销账户后，您将无法再登录本账号；"
+            android:textColor="#595B66"
+            android:textSize="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.注销本账户后，您已付费的会员信息也将全部删除，届时无法进行关于会员信息的查询及使用，请谨慎操作；"
+            android:textColor="#595B66"
+            android:layout_marginTop="8dp"
+            android:textSize="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.永久删除账号行为无法撤销及恢复跑；"
+            android:textColor="#595B66"
+            android:layout_marginTop="8dp"
+            android:textSize="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.因注销账户发生的一切问题将与本产品及本产品的运营者无关，由操作者本人承担。"
+            android:textColor="#595B66"
+            android:layout_marginTop="30dp"
+            android:textSize="15dp"/>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/unUserBtn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="15dp"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textColor="#FFFFFF"
+        android:text="注销账户"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/default_btn_bg"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

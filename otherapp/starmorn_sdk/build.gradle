@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'ps.center'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 24
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+
+    api fileTree(dir: "libs/ad", include: ['*.jar', '*.aar'])
+    api fileTree(dir: "libs/alicode", include: ['*.jar', '*.aar'])
+    api fileTree(dir: "libs/bugly", include: ['*.jar', '*.aar'])
+    api fileTree(dir: "libs/umeng", include: ['*.jar', '*.aar'])
+    api fileTree(dir: "libs", include: ['*.jar', '*.aar'])
+    implementation 'com.tencent:mmkv-static:1.2.10'
+    // 微信开放平台 Android SDK（含登录、分享、支付等功能）
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.30'
+    // 版本号请到支付宝开放平台下载页查看最新版本
+    implementation 'com.alipay.sdk:alipaysdk-android:15.8.33'
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.21'
+
+
+    // Glide 核心
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    // 注解处理器：让 @GlideModule、GlideApp 等生效
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+}

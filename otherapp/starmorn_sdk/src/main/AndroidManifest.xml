@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="33" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <queries>
+        <package android:name="com.tencent.mm" />
+        <package android:name="com.eg.android.AlipayGphone" />
+    </queries>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/business_network_security_config"
+        android:requestLegacyExternalStorage="true" >
+        <meta-data
+            android:name="business_sdk_version"
+            android:value="1.4.7" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/business_self_provider_paths" />
+        </provider>
+
+        <!-- 一键登录 -->
+        <activity
+            android:name="com.mobile.auth.gatewayauth.LoginAuthActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="com.mobile.auth.gatewayauth.activity.AuthWebVeiwActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@style/Theme.ControlCenter" />
+        <!-- 一键登录 END -->
+
+        <activity
+            android:name="ps.center.adsdk.AdActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 穿山甲 start================== -->
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.TTFileProvider"
+            android:authorities="${applicationId}.TTFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/business_pangle_file_paths" />
+        </provider>
+        <provider
+            android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+            android:authorities="${applicationId}.TTMultiProvider"
+            android:exported="false" />
+        <!-- 穿山甲 end================== -->
+
+        <activity
+            android:name="ps.center.views.activity.webview.NativeWebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.utils.exception.ExceptionLogsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.utils.exception.ExceptionDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.mine.FeedbackActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.mine.MoreSettingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.login.UserInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.login.UnUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.login.LoginSMSActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.guide.GuideActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.pay.PayActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.mine.ComplaintActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.pay.PayScrollActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+        <activity
+            android:name="ps.center.application.pay.ListPayActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ControlCenter" />
+    </application>
+
+</manifest>

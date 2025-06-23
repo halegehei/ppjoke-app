@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:id="@+id/returnBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/business_return_black_btn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="关于我们"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:textColor="#000000" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLayout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/item1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="用户协议"
+                android:textSize="16dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/business_mine_goto"
+                android:layout_alignParentEnd="true"
+                android:padding="13dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="隐私协议"
+                android:textSize="16dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/business_mine_goto"
+                android:layout_alignParentEnd="true"
+                android:padding="13dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="付费协议"
+                android:textSize="16dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/business_mine_goto"
+                android:layout_alignParentEnd="true"
+                android:padding="13dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="自动续费协议"
+                android:textSize="16dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/business_mine_goto"
+                android:layout_alignParentEnd="true"
+                android:padding="13dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/beianLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="18dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/beianInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公网安备"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textSize="13dp"
+            android:textColor="#999999"
+            android:paddingBottom="2dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:src="@mipmap/business_beian_jump_image"/>
+    </LinearLayout>
+</RelativeLayout>

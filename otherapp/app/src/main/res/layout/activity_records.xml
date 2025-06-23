@@ -1,0 +1,69 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F7F7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7"
+       >
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:src="@mipmap/records_bg"
+            android:scaleType="fitXY"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="连接记录"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="48dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true" />
+        <ImageView
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/icon_back"
+            />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recyclerView"
+        android:background="#f7f7f7"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-65dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+       />
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="alpha">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="business_dialog_theme_cancel_btn_text_color">#999999</color>
+    <color name="business_dialog_theme_submit_btn_text_color">#FFFFFF</color>
+    <color name="color_0C0C0C">#0C0C0C</color>
+    <color name="color_333333">#333333</color>
+    <color name="free_num_dialog_bg_color_end">#FFFFFF</color>
+    <color name="free_num_dialog_bg_color_start">#FFFFFF</color>
+    <color name="free_num_dialog_submit_color_end">#4D55FF</color>
+    <color name="free_num_dialog_submit_color_start">#4D55FF</color>
+    <color name="free_number_desc_text_color">#999999</color>
+    <color name="free_number_submit_text_color">#FFFFFF</color>
+    <color name="free_number_title_text_color">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <item name="xbanner_pointId" type="id"/>
+    <style name="Theme.ControlCenter" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:windowDisablePreview">true</item><!--模糊，背景透明是这个-->
+    </style>
+    <style name="Theme.WX" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+    <style name="authsdk_activity_dialog" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="dialogAlphaBack" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:backgroundDimEnabled">false</item><!--模糊，背景透明是这个-->
+    </style>
+    <style name="dialogAnimation__down__center">
+        <item name="android:windowEnterAnimation">@anim/dialog_in_animation__down__center</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_animation__down__center</item>
+    </style>
+    <style name="dialogAnimation__max__min">
+        <item name="android:windowEnterAnimation">@anim/dialog_in_animation__max__min</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_animation__max__min</item>
+    </style>
+    <style name="dialogAnimation__min__max">
+        <item name="android:windowEnterAnimation">@anim/dialog_in_animation__min__max</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_animation__min__max</item>
+    </style>
+    <style name="dialogAnimation__up__center">
+        <item name="android:windowEnterAnimation">@anim/dialog_in_animation__up__center</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_animation__up__center</item>
+    </style>
+    <style name="dialogBlackBack" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊，背景透明是这个-->
+    </style>
+    <style name="free_number_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊，背景透明是这个-->
+    </style>
+    <declare-styleable name="ContrastImageView">
+        <attr format="reference|color" name="leftDrawable"/>
+        <attr format="reference|color" name="rightDrawable"/>
+        <attr format="reference|color" name="centerXDrawable"/>
+    </declare-styleable>
+    <declare-styleable name="OnOffView">
+        <attr format="color" name="offColor"/>   <!--开关关闭时颜色-->
+        <attr format="color" name="onColor"/>    <!--打开时颜色-->
+        <attr format="dimension" name="backWith"/>    <!--可以不要~~-->
+        <attr format="dimension" name="iconSize"/>    <!--小图标大小-->
+        <attr format="dimension" name="paddingSize"/>    <!--间距-->
+        <attr format="boolean" name="defOff"/>      <!--默认状态-->
+    </declare-styleable>
+    <declare-styleable name="RoundImageView">
+        <attr format="dimension" name="img_round"/>
+        <attr format="dimension" name="img_roundTopLeft"/>
+        <attr format="dimension" name="img_roundTopRight"/>
+        <attr format="dimension" name="img_roundBottomLeft"/>
+        <attr format="dimension" name="img_roundBottomRight"/>
+    </declare-styleable>
+    <declare-styleable name="RoundLinearLayout">
+        <attr format="dimension" name="round_ll_bg"/>
+        <attr format="color" name="backgroundColor_ll_bg"/>
+        <attr format="color" name="shadowColor_ll_bg"/>
+        <attr format="float|integer" name="shadowDx_ll_bg"/>
+        <attr format="float|integer" name="shadowDy_ll_bg"/>
+        <attr format="float|integer" name="shadowRadius_ll_bg"/>
+        <attr format="dimension" name="shadowPadding_ll_bg"/>
+    </declare-styleable>
+    <declare-styleable name="RoundRelativeLayout">
+        <attr format="dimension" name="round_rl_bg"/>
+        <attr format="color" name="backgroundColor_rl_bg"/>
+        <attr format="color" name="shadowColor_rl_bg"/>
+        <attr format="float|integer" name="shadowDx_rl_bg"/>
+        <attr format="float|integer" name="shadowDy_rl_bg"/>
+        <attr format="float|integer" name="shadowRadius_rl_bg"/>
+        <attr format="dimension" name="shadowPadding_rl_bg"/>
+    </declare-styleable>
+    <declare-styleable name="RoundTextView">
+        <attr format="dimension" name="round_text_bg"/>
+        <attr format="color" name="backgroundColor_text_bg"/>
+        <attr format="color" name="shadowColor_text_bg"/>
+        <attr format="float|integer" name="shadowDx_text_bg"/>
+        <attr format="float|integer" name="shadowDy_text_bg"/>
+        <attr format="float|integer" name="shadowRadius_text_bg"/>
+        <attr format="dimension" name="shadowPadding_text_bg"/>
+    </declare-styleable>
+    <declare-styleable name="ScrollTab">
+        <attr format="color" name="selectColor"/>
+        <attr format="color" name="defaultColor"/>
+        <attr format="dimension" name="textSize"/>
+        <attr format="dimension" name="selectTextMaxSize"/>
+    </declare-styleable>
+    <declare-styleable name="XBanner">
+        <attr format="boolean" name="isAutoPlay"/>
+        <attr format="boolean" name="isHandLoop"/>
+        <attr format="integer|reference" name="AutoPlayTime"/>
+        <attr format="reference" name="pointNormal"/>
+        <attr format="reference" name="pointSelect"/>
+        <attr format="reference" name="indicatorDrawable"/>
+        <attr format="boolean" name="pointsVisibility"/>
+        <attr format="boolean" name="isTipsMarquee"/>
+        <attr format="enum" name="pointsPosition">
+            <enum name="LEFT" value="0"/>
+            <enum name="CENTER" value="1"/>
+            <enum name="RIGHT" value="2"/>
+        </attr>
+        <attr format="reference|color" name="pointsContainerBackground"/>
+        <attr format="enum" name="pointContainerPosition">
+            <enum name="TOP" value="10"/>
+            <enum name="BOTTOM" value="12"/>
+        </attr>
+        <!-- 指示点容器左右内间距 -->
+        <attr format="dimension" name="pointContainerLeftRightPadding"/>
+        <!-- 指示点上下内间距 -->
+        <attr format="dimension" name="pointTopBottomPadding"/>
+        <!-- 指示点左右内间距 -->
+        <attr format="dimension" name="pointLeftRightPadding"/>
+        <!-- 提示文案的文字颜色 -->
+        <attr format="reference|color" name="tipTextColor"/>
+        <!-- 提示文案的文字大小 -->
+        <attr format="dimension" name="tipTextSize"/>
+        <!--是否是数字指示器-->
+        <attr format="boolean" name="isShowNumberIndicator"/>
+        <!-- 数字指示器背景 -->
+        <attr format="reference" name="numberIndicatorBacgroud"/>
+        <!-- 当只有一页数据时是否显示指示器，默认值为false -->
+        <attr format="boolean" name="isShowIndicatorOnlyOne"/>
+        <!-- 图片切换速度 -->
+        <attr format="integer" name="pageChangeDuration"/>
+        <!--图片轮播框架展占位图-->
+        <attr format="reference" name="placeholderDrawable"/>
+        <!--是否开启一屏显示多个模式 默认不开启-->
+        <attr format="boolean" name="isClipChildrenMode"/>
+        <!--一屏显示多个左间距-->
+        <attr format="dimension" name="clipChildrenLeftMargin"/>
+        <!--一屏显示多个右间距-->
+        <attr format="dimension" name="clipChildrenRightMargin"/>
+        <!--一屏显示多个上下间距-->
+        <attr format="dimension" name="clipChildrenTopBottomMargin"/>
+        <!--设置viewpager间距-->
+        <attr format="dimension" name="viewpagerMargin"/>
+        <!--少于三张是否支持一屏多显模式-->
+        <attr format="boolean" name="isClipChildrenModeLessThree"/>
+        <!--是否展示提示文案-->
+        <attr format="boolean" name="isShowTips"/>
+        <!--banner轮播区域底部margin-->
+        <attr format="dimension" name="bannerBottomMargin"/>
+        <!-- 占位图缩放模式 -->
+        <attr name="android:scaleType"/>
+        <!--一屏多显模式下 是否支持点击侧边切换图片，默认开启-->
+        <attr format="boolean" name="isClickSide"/>
+        <!--一屏多显模式下 指示器是否显示在中间图片位置，默认显示中间-->
+        <attr format="boolean" name="showIndicatorInCenter"/>
+    </declare-styleable>
+</resources>

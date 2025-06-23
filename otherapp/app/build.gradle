@@ -1,0 +1,185 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.litemob.screentogetherpink'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.litemob.screentogetherpink"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        flavorDimensions "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dataBinding {
+        enabled true
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    productFlavors {
+        dimension {
+            applicationId "com.tjrd.phonecontrolb"
+            versionCode 211
+            versionName "2.1.1"
+            manifestPlaceholders = [
+                    APP_NAME         : "远程同屏大师",  // 渠道包
+                    CENTER_APP_ID    : "1351",//中台地址
+                    CENTER_SERVER_URL: "https://lm.center.sanwubeixin.cn/",//中台地址
+                    PACKET           : "juliang",
+
+//                    PACKET           : "xiaomi",
+//                    PACKET           : "yyb",
+//                    PACKET           : "vivo",
+//                    PACKET           : "oppo",
+//                    PACKET           : "huawei",
+//                    PACKET           : "rongyao",
+                    ICON_R           : "icon_r_phonecontrolb",
+                    THEME            : "LaunchTheme_phonecontrolb",
+            ]
+        }
+
+    }
+
+    //自定义打包名称
+//    applicationVariants.all { variant ->
+//        variant.outputs.all { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                outputFileName = "${productFlavors.versionCode[0]}-" +
+//                        "${productFlavors.manifestPlaceholders["APP_NAME"][0]}-" +
+//                        "${productFlavors.manifestPlaceholders["CENTER_APP_ID"][0]}-" +
+//                        "${productFlavors.manifestPlaceholders["PACKET"][0]}-" +
+//                        "147.apk"
+//            }
+//        }
+//    }
+
+
+    signingConfigs {
+        release {
+            try {
+                if (productFlavors.dimension.applicationId == 'com.tjrd.phonecontrolb') {
+                    keyAlias 'phonecontrolb'
+                    keyPassword 'phonecontrolb2022'
+                    storeFile file('../keystores/phonecontrolb.keystore')
+                    storePassword 'phonecontrolb2022'
+                }
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }
+        debug {
+            try {
+                if (productFlavors.dimension.applicationId == 'com.tjrd.phonecontrolb') {
+                    keyAlias 'phonecontrolb'
+                    keyPassword 'phonecontrolb2022'
+                    storeFile file('../keystores/phonecontrolb.keystore')
+                    storePassword 'phonecontrolb2022'
+                }
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: "libs/ad", include: ['*.jar', '*.aar'])
+    implementation fileTree(dir: "libs/alicode", include: ['*.jar', '*.aar'])
+    implementation fileTree(dir: "libs/bugly", include: ['*.jar', '*.aar'])
+    implementation fileTree(dir: "libs/umeng", include: ['*.jar', '*.aar'])
+    implementation fileTree(dir: "libs", include: ['*.jar', '*.aar'])
+
+
+    implementation(project(':starmorn_sdk')) {
+        exclude group: 'com.gyf.immersionbar', module: 'immersionbar'
+        exclude group: 'com.geyifeng.immersionbar', module: 'immersionbar'
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+        exclude group: 'com.squareup.okio', module: 'okio'
+    }
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.10.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //腾讯mMKV
+    implementation 'com.tencent:mmkv-static:1.2.10'
+    //万能适配器
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.35'
+
+    // webp格式文件加载器 webpDecoder
+    def GLIDE_VERSION = "4.12.0"
+    implementation "com.github.zjupure:webpdecoder:2.0.${GLIDE_VERSION}"
+    //图片加载
+    implementation "com.github.bumptech.glide:glide:${GLIDE_VERSION}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${GLIDE_VERSION}"
+
+    implementation 'com.github.getActivity:XXPermissions:18.2'
+
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
+
+    api 'com.alipay.sdk:alipaysdk-android:15.8.11'
+
+    implementation 'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    implementation 'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    implementation 'io.github.scwang90:refresh-footer-classics:2.0.5'    //经典加载、
+
+    implementation('com.aliyun.dpa:oss-android-sdk:2.9.5') {
+        exclude group: 'com.squareup.okio', module: 'okio'
+        exclude group: 'com.squareup.okhttp3', module: 'okhttp'
+    }
+
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
+
+    implementation 'com.otaliastudios:cameraview:2.7.2'
+    implementation 'com.github.jenly1314:zxing-lite:3.0.1'
+
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.1'
+
+
+}

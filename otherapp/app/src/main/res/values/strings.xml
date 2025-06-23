@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BillHelper</string>
+    <string name="qrcodetip">请将二维码放入取景框中</string>
+</resources>

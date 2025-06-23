@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@mipmap/business_img_updata_normal" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_before"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_bg"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/business_bg_whit_10"
+        android:minHeight="150dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingVertical="15dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新版本特性"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="3dp"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/business_btn_bg_tocolor25"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="立即更新"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="取消更新"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_after"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_bg"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/business_bg_whit_10"
+        android:gravity="center"
+        android:minHeight="150dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingVertical="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在为您更新，请耐心等待~"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/mProgress"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_marginTop="10dp"
+            android:progressDrawable="@drawable/business_progress_bar"/>
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="0%"
+            android:textSize="10sp" />
+        <TextView
+            android:id="@+id/tv_cancle_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="取消更新"
+            android:textSize="18sp"
+            android:textColor="#999999"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_finish"
+        android:layout_width="300dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/iv_bg"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/business_bg_whit_10"
+        android:gravity="center"
+        android:minHeight="150dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingVertical="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您已完成更新~"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_know_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/business_btn_bg_tocolor25"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="我知道了"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

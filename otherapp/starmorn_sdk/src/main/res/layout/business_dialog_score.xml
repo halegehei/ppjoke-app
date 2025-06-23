@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@mipmap/business_score_dialog_top_bg">
+
+            <ImageView
+                android:id="@+id/statusImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/business_score_status_1" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/business_dialog_score_bg"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可能我还并不完美，但一直在努力完善。给我一个5星好评吧～"
+                android:layout_marginHorizontal="40dp"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="14dp"/>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/starList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="1"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    tools:listitem="@layout/business_item_score_star"/>
+
+                <View
+                    android:id="@+id/starView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/starList"
+                    android:layout_alignBottom="@+id/starList"/>
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:hint="请输入您的反馈～"
+                android:textSize="13dp"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:textColorHint="#999999"
+                android:textColor="#000000"
+                android:background="@drawable/business_feedback_edit_bg"/>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="50dp"
+                android:visibility="gone"
+                android:text="问题反馈"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:background="@drawable/default_btn_bg"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/business_score_close_btn"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
